@@ -1,4 +1,4 @@
-AI Invoice Agent
+# AI Invoice Agent
 
 Describe an invoice in plain English, review it, and send it through PayPal. Built for the PayPal AI Hackathon.
 
@@ -6,7 +6,7 @@ Describe an invoice in plain English, review it, and send it through PayPal. Bui
 
 Freelancers lose time chasing payments and filling in invoice forms. This agent turns one sentence into a real PayPal invoice, asks you to confirm it, sends it, and tracks whether it has been paid.
 
-How it works
+## How it works
 You type a request in everyday language.
 Gemini parses it into structured data: client name, line items, amounts (USD), and due days.
 You confirm the parsed invoice on a review card. Nothing is sent until you approve.
@@ -23,13 +23,13 @@ Setup
 
 Requirements: Python 3.10 or newer, a free PayPal Developer account, and a Gemini API key.
 
-1. Clone and install
+## 1. Clone and install
 bash
 git clone https://github.com/anukrati137/Invoice-agent.git
 cd Invoice-agent
 pip install -r requirements.txt
 
-2. Create PayPal sandbox accounts
+ ## 2. Create PayPal sandbox accounts
 Log in at developer.paypal.com and open Testing Tools → Sandbox Accounts.
 You need two sandbox accounts:
 a Business account (the freelancer who sends invoices), and
@@ -37,7 +37,7 @@ a Personal account (the client who pays).
 Set the Personal (client) account's country to United States. PayPal blocks sending invoices to customers in India, so an India-based test client causes a send error.
 Under Apps & Credentials (Sandbox), create an app linked to the Business account and make sure Invoicing is enabled. Copy the Client ID and Secret.
 
-3. Add your keys to .env and fill in the values:
+## 3. Add your keys to .env and fill in the values:
 
 PAYPAL_CLIENT_ID=your_sandbox_client_id
 PAYPAL_CLIENT_SECRET=your_sandbox_secret
@@ -46,7 +46,7 @@ CLIENT_EMAIL=your_us_sandbox_personal_email
 
 .env is git-ignored, so your keys are never committed.
 
-4. Run
+## 4. Run
 bash
 streamlit run streamlit_app.py
 
