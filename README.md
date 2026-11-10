@@ -23,13 +23,13 @@ Setup
 
 Requirements: Python 3.10 or newer, a free PayPal Developer account, and a Gemini API key.
 
-### 1. Clone and install
+### 1. Clone and install:
 bash
 git clone https://github.com/anukrati137/Invoice-agent.git
 cd Invoice-agent
 pip install -r requirements.txt
 
- ### 2. Create PayPal sandbox accounts
+ ### 2. Create PayPal sandbox accounts:
 Log in at developer.paypal.com and open Testing Tools → Sandbox Accounts.
 You need two sandbox accounts:
 a Business account (the freelancer who sends invoices), and
@@ -46,7 +46,7 @@ CLIENT_EMAIL=your_us_sandbox_personal_email
 
 .env is git-ignored, so your keys are never committed.
 
-### 4. Run
+### 4. Run:
 bash
 streamlit run streamlit_app.py
 
