@@ -37,9 +37,7 @@ a Personal account (the client who pays).
 Set the Personal (client) account's country to United States. PayPal blocks sending invoices to customers in India, so an India-based test client causes a send error.
 Under Apps & Credentials (Sandbox), create an app linked to the Business account and make sure Invoicing is enabled. Copy the Client ID and Secret.
 
-3. Add your keys
-
- to .env and fill in the values:
+3. Add your keys to .env and fill in the values:
 
 PAYPAL_CLIENT_ID=your_sandbox_client_id
 PAYPAL_CLIENT_SECRET=your_sandbox_secret
